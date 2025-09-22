@@ -15,9 +15,7 @@ Ce TP vise à déployer l’application **Odoo** (ERP) via **docker-compose** en
 
 ## Structure du dépôt
 
-# .
 # ├─ docker-compose.yml
 # ├─ README.md
-# ├─ .gitignore
 # └─ (odoo_pg_pass)
 
