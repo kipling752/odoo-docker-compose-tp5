@@ -13,6 +13,27 @@ Ce TP vise à déployer l’application **Odoo** (ERP) via **docker-compose** en
 3. Savoir démarrer, vérifier, puis nettoyer l’environnement.
 4. Conserver les bonnes pratiques (ne pas committer les secrets).
 
+## Nettoyage
+# Arrêter
+docker-compose stop
+
+# Supprimer conteneurs et réseau (mais garder volumes)
+docker-compose down
+
+# Supprimer aussi les volumes (efface les données!)
+docker-compose down -v
+
+# Nettoyage global (attention: supprime beaucoup)
+docker system prune -a --volumes
+
+# Bonnes pratiques
+
+1. Utiliser des secrets ou variables d'environnement et ne jamais committer les mots de passe.
+
+2. Sauvegarder/snapshoter les volumes si tu veux conserver la BD.
+
+3. Utiliser des noms d’images & versions fixes (ici odoo:17.0, postgres:15) afin de garder la reproductibilité.
+
 ## Structure du dépôt
 
 # ├─ docker-compose.yml
